@@ -10,6 +10,7 @@
     tools:showIn="@layout/activity_another"
     tools:context="com.foonjitsu.ultastring.AnotherActivity">
     <TextView
+        android:id="@+id/secondActivityTextView"
         android:textColor="@color/colorAccent"
         android:background="@color/colorPrimary"
         android:textSize="70sp"

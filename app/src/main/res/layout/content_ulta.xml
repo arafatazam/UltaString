@@ -18,8 +18,8 @@
         />
     <Button
         android:id="@+id/ultaoButton"
-        android:textSize="40sp"
-        android:text="Ultao"
+        android:textSize="20sp"
+        android:text="Ultao in same activity"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -36,7 +36,7 @@
         android:background="@color/lessLightBackground"/>
     <Button
         android:id="@+id/startSecondActivityButton"
-        android:text="Start 2nd Activity"
+        android:text="Ultao in another Activity"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 </LinearLayout>

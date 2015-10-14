@@ -44,7 +44,10 @@ public class UltaActivity extends AppCompatActivity {
         startSecondActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String original = inputEditText.getText().toString();
+                String ulta = new StringBuilder(original).reverse().toString();
                 Intent intent = new Intent(UltaActivity.this, AnotherActivity.class);
+                intent.putExtra("ULTA_STRING",ulta);
                 startActivity(intent);
             }
         });

@@ -1,5 +1,6 @@
 package com.foonjitsu.ultastring;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,12 +32,20 @@ public class UltaActivity extends AppCompatActivity {
         final EditText inputEditText = (EditText)findViewById(R.id.inputEditText);
         final TextView outputTextView = (TextView)findViewById(R.id.outputTextView);
         Button ultaoButton = (Button) findViewById(R.id.ultaoButton);
+        Button startSecondActivityButton = (Button) findViewById(R.id.startSecondActivityButton);
         ultaoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String original = inputEditText.getText().toString();
                 String ulta = new StringBuilder(original).reverse().toString();
                 outputTextView.setText(ulta);
+            }
+        });
+        startSecondActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UltaActivity.this, AnotherActivity.class);
+                startActivity(intent);
             }
         });
     }
